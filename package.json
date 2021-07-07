@@ -1,0 +1,44 @@
+{
+  "name": "@skylib/typescript-types",
+  "version": "0.1.0",
+  "private": false,
+  "description": "Typescript types",
+  "keywords": [
+    "types",
+    "typescript"
+  ],
+  "homepage": "https://github.com/ilyub/typescript-types",
+  "bugs": {
+    "url": "https://github.com/ilyub/typescript-types/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/ilyub/typescript-types.git"
+  },
+  "license": "ISC",
+  "author": "Ilya Lyubinskiy <admin.phpdev@gmail.com> (https://github.com/ilyub)",
+  "publisher": "ilyub",
+  "scripts": {
+    "commitlint": "commitlint --edit",
+    "commitlint-all": "commitlint --config commitlint-all.config.js --from=",
+    "prepare": "cpy node_modules/@skylib/config/src/git-hooks/* .git/hooks",
+    "update-package-check": "ncu --dep dev,prod --reject @types/node",
+    "update-package-check-peer": "ncu --dep peer --minimal --reject @types/node",
+    "update-package-check-skylib": "ncu --dep peer --filter @skylib/*",
+    "update-package-force": "ncu --dep dev,prod --reject @types/node --upgrade",
+    "update-package-force-peer": "ncu --dep peer --minimal --reject @types/node --upgrade",
+    "update-package-force-skylib": "ncu --dep peer --filter @skylib/* --upgrade"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^14.1.0",
+    "@commitlint/config-conventional": "^14.1.0",
+    "@skylib/config": "^0.1.0",
+    "@types/node": "^15.14.0",
+    "cpy-cli": "^3.1.1",
+    "npm-check-updates": "^12.0.2"
+  },
+  "engines": {
+    "node": ">=14.0.0",
+    "npm": ">=7.0.0"
+  }
+}

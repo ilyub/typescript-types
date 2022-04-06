@@ -16,7 +16,7 @@
     "url": "git://github.com/ilyub/typescript-types.git"
   },
   "license": "ISC",
-  "author": "Ilya Lyubinskiy <admin.phpdev@gmail.com> (https://github.com/ilyub)",
+  "author": "Ilia Liubinskii <admin.phpdev@gmail.com> (https://github.com/ilyub)",
   "publisher": "ilyub",
   "scripts": {
     "commitlint": "commitlint --edit",
@@ -30,12 +30,7 @@
     "update-package-force-skylib": "ncu --dep peer --filter @skylib/* --upgrade"
   },
   "devDependencies": {
-    "@commitlint/cli": "^16.2.3",
-    "@commitlint/config-conventional": "^16.2.1",
-    "@skylib/config": "^1.2.1",
-    "@types/node": "^15.14.0",
-    "cpy-cli": "^4.1.0",
-    "npm-check-updates": "^12.5.7"
+    "@skylib/config": "^1.2.1"
   },
   "engines": {
     "node": ">=14.0.0",

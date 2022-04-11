@@ -30,7 +30,7 @@
     "update-package-force-skylib": "ncu --dep peer --filter @skylib/* --upgrade"
   },
   "devDependencies": {
-    "@skylib/config": "^1.2.1"
+    "@skylib/config": "^1.11.1"
   },
   "engines": {
     "node": ">=14.0.0",

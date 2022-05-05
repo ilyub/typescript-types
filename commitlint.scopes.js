@@ -1,1 +1,1 @@
-module.exports = ["ObjectConstructor", "index", "original"];
+module.exports = { dirs: ["./src"], scopes: ["ObjectConstructor"] };

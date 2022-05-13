@@ -18,22 +18,45 @@
   "license": "ISC",
   "author": "Ilia Liubinskii <admin.phpdev@gmail.com> (https://github.com/ilyub)",
   "publisher": "ilyub",
+  "files": [
+    "/*.d.ts"
+  ],
   "scripts": {
+    "add-tags": "php node_modules/@skylib/config/src/utils/add-tags.php",
+    "browserslist": "browserslist",
+    "clear-cache": "cf cache node_modules/.cache",
     "commitlint": "commitlint --edit",
     "commitlint-all": "commitlint --config commitlint-all.config.js --from=",
-    "prepare": "cpy node_modules/@skylib/config/src/git-hooks/* .git/hooks",
-    "update-package-check": "ncu --dep dev,prod",
-    "update-package-check-peer": "ncu --dep peer --minimal",
-    "update-package-check-skylib": "ncu --dep peer --filter @skylib/*",
-    "update-package-force": "ncu --dep dev,prod --upgrade",
-    "update-package-force-peer": "ncu --dep peer --minimal --upgrade",
-    "update-package-force-skylib": "ncu --dep peer --filter @skylib/* --upgrade"
+    "config-lint": "node node_modules/@skylib/config/src/utils/config-lint.js",
+    "delete-tags": "php node_modules/@skylib/config/src/utils/delete-tags.php",
+    "full-check": "php node_modules/@skylib/config/src/utils/full-check.php",
+    "husky:commit-msg": "npm run commitlint",
+    "husky:post-commit": "php node_modules/@skylib/config/src/utils/post-commit.php",
+    "husky:pre-commit": "php node_modules/@skylib/config/src/utils/pre-commit.php",
+    "husky:unset-hooks": "git config --unset core.hooksPath",
+    "npm:audit": "npm audit",
+    "npm:clean-install": "npm clean-install --no-audit --strict-peer-deps",
+    "npm:install": "npm install --no-audit --strict-peer-deps",
+    "npm:publish": "publish-if-not-exists",
+    "npm:regenerate-lock-file": "npm install --no-audit --package-lock-only --strict-peer-deps",
+    "npm:update": "npm update --no-audit --strict-peer-deps",
+    "package-json-lint": "npmPkgJsonLint .",
+    "prepare": "husky install",
+    "update-package-check": "ncu --dep dev,peer,prod",
+    "update-package-force": "ncu --dep dev,peer,prod --upgrade",
+    "upgrade": "npm run update-package-force & npm run npm:install"
   },
   "devDependencies": {
-    "@skylib/config": "^1.11.1"
+    "@skylib/config": "^3.7.0"
   },
   "engines": {
     "node": ">=14.0.0",
     "npm": ">=7.0.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "overrides": {
+    "package-json": "8.1.0"
   }
 }

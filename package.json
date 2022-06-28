@@ -22,31 +22,31 @@
     "/*.d.ts"
   ],
   "scripts": {
-    "add-tags": "php node_modules/@skylib/config/src/utils/add-tags.php",
+    "add-tags": "php node_modules/@skylib/config/bin/add-tags.php",
     "browserslist": "browserslist",
     "clear-cache": "cf cache node_modules/.cache",
     "commitlint": "commitlint --edit",
     "commitlint-all": "commitlint --config commitlint-all.config.js --from=",
-    "config-lint": "node node_modules/@skylib/config/src/utils/config-lint.js",
-    "delete-tags": "php node_modules/@skylib/config/src/utils/delete-tags.php",
-    "full-check": "php node_modules/@skylib/config/src/utils/full-check.php",
+    "config-lint": "node node_modules/@skylib/config/bin/config-lint.js",
+    "delete-tags": "php node_modules/@skylib/config/bin/delete-tags.php",
+    "full-check": "php node_modules/@skylib/config/bin/full-check.php",
     "husky:commit-msg": "npm run commitlint",
-    "husky:post-commit": "php node_modules/@skylib/config/src/utils/post-commit.php",
-    "husky:pre-commit": "php node_modules/@skylib/config/src/utils/pre-commit.php",
+    "husky:post-commit": "php node_modules/@skylib/config/bin/post-commit.php",
+    "husky:pre-commit": "php node_modules/@skylib/config/bin/pre-commit.php",
     "husky:unset-hooks": "git config --unset core.hooksPath",
-    "npm:install-clean": "npm install-clean --no-audit --strict-peer-deps",
     "npm:install": "npm install --no-audit --strict-peer-deps",
+    "npm:install-clean": "npm install-clean --no-audit --strict-peer-deps",
     "npm:publish": "publish-if-not-exists",
     "npm:regenerate-lock-file": "npm install --no-audit --package-lock-only --strict-peer-deps",
     "npm:update": "npm update --no-audit --strict-peer-deps",
-    "package-json-lint": "npmPkgJsonLint .",
+    "package-json-lint": "npmPkgJsonLint ./package.json",
     "prepare": "husky install",
     "update-package-check": "ncu --dep dev,peer,prod",
     "update-package-force": "ncu --dep dev,peer,prod --upgrade",
     "upgrade": "npm run update-package-force & npm run npm:install"
   },
   "devDependencies": {
-    "@skylib/config": "^3.7.0"
+    "@skylib/config": "^3.12.0"
   },
   "engines": {
     "node": ">=14.0.0",

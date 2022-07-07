@@ -22,6 +22,9 @@
     "editor.formatOnSave": true,
     "editor.tabSize": 2,
     "editor.unicodeHighlight.ambiguousCharacters": true,
+    "eslint.codeActionsOnSave.rules": [
+      "*"
+    ],
     "eslint.format.enable": true,
     "files.eol": "\n",
     "files.insertFinalNewline": true,

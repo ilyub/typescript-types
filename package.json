@@ -45,7 +45,7 @@
     "prepare": "husky install",
     "update-package-check": "ncu --dep dev,peer,prod",
     "update-package-force": "ncu --dep dev,peer,prod --upgrade",
-    "upgrade": "npm run update-package-force & npm run npm:install"
+    "upgrade": "npm run update-package-force && npm run npm:install"
   },
   "devDependencies": {
     "@skylib/config": "^3.22.0",
